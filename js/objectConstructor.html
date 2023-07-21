@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Object Constructor
+    </h1>
+
+     <script>
+        // var User = function() // cách 1 
+        function User(firstName, lastName, avatar) { 
+            this.firstName = firstName ;
+            this.lastName = lastName ;
+            this.avatar = avatar ; 
+
+            this.getName = function() {
+                return `${this.firstName} ${this.lastName}`  
+                // return this.firstName + this.lastName
+            }
+        }
+
+    var author = new User('Thanh Dat','Bui','avatar') ;
+    var user = new User('Linh','Tong','avatar ') ;
+
+    author.age = '17' ;
+    user.address = 'Hue' ;
+    // author.prototype.classname = 'F8'
+    User.prototype.classname = 'F8' ;
+    User.prototype.getName1 = function() {
+        return this.classname ;
+    }
+        
+        console.log(author.age)
+        console.log(author.classname);
+        console.log(user.getName1()) ;
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Date</h1>
+
+    <script>
+        var date = new Date() ; 
+
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate() ;
+        var hours = date.getHours();
+
+    function Time() {
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate() ;
+        var hours = date.getHours();
+
+        return `${year} / ${month} / ${day} / ${hours}`
+        }
+        console.log(` tạo date theo từng lệnh ${year} / ${month} / ${day} / ${hours}`)
+        console.log(` tạo date theo hàm ${Time()}`)
+
+
+        // console.log(typeof date)
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Vòng Lặp While 
+    </h1>
+    <script>
+        /* Tính tổng các số chẵn từ 0 tới n 
+        bằng cách sử dụng vòng lặp while trong javascript */
+
+
+        function tong(n) {
+            var i = 0 ;
+            var sum = 0;
+
+            while ( i <= n ) { 
+            if ( i % 2 == 0 ) {
+                sum += i ;
+            }
+            // tăng biến đếm 
+            i++ ;
+        }
+        return sum;
+    }
+        var n = 17 ;
+        console.log(`Tong cac số chẵn từ 0 đến ${n} là ${tong(n)}`)
+
+    </script>
+</body>
+</html>
