@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var courses = [
+            {
+                id : 1 ,
+                name : ' JavaScript' ,
+                coin : 250
+            } ,
+            {
+                id : 2 ,
+                name : ' HTML,CSS' ,
+                coin : 0  
+            } ,
+            {
+                id : 3 ,
+                name : 'Ruby' ,
+                coin : 0
+            } ,
+            {
+                id : 4 ,
+                name : 'Ruby' ,
+                coin : 400
+            }
+        ]
+            // for ( i = 1 ; i < courses.length ; i++ ) {
+            //     console.log(courses[i]);
+            // } 
+            // trả về từng phần tử của mảng 
+            // courses.forEach( function(course,index){
+            //     console.log(index,course)
+            // }) 
+            
+            // kiểm tra tất cả có chung 1 giá trị hay không
+            // var isFree = courses.every( function(course , index) {
+            //     console.log(index) ;
+            //     return course.coin === 0 ;
+            // });
+
+            // chỉ cần 1 giá trị thỏaa mãn là true  
+            // var isFree = courses.some( function(course , index ) {
+            //     console.log(index) 
+            //     return course.coin === 0 ;
+            // })
+            
+            // console.log(isFree)
+
+            // tìm 1 phần tử trong mảng 
+            // var course = courses.find( function(course,index) {
+            //     console.log(index)
+            //     return course.name === 'Ruby'
+            // })
+            // console.log(course)  
+
+            // tìm tất cả từng tử có cùng 1 dữ liệu
+            var course = courses.filter(function(course) {
+                return course.name === 'Ruby'
+            })
+            console.log(course)
+
+    </script>
+</body>
+</html>

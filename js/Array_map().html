@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Array map() method trong javascript
+    </h1>
+
+    <script>
+               var courses = [
+            {
+                id : 1 ,
+                name : ' JavaScript' ,
+                coin : 250
+            } ,
+            {
+                id : 2 ,
+                name : ' HTML,CSS' ,
+                coin : 0  
+            } ,
+            {
+                id : 3 ,
+                name : 'Ruby' ,
+                coin : 0
+            } ,
+            {
+                id : 4 ,
+                name : 'Ruby' ,
+                coin : 400
+            }
+        ]
+        function courseHandler(course,index) {
+            // console.log(course) ;
+            return {
+                id : course.id,
+                name  : ` Khoa Hoc : ${course.name}` ,
+                coin : course.coin,
+                coinText : `Gia ${course.coin}`,
+                index : index 
+            }
+        }
+        var newCourses = courses.map(courseHandler)
+        console.log(newCourses);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Array reduce() method qua ví dụ
+    </h1>
+    <script>
+        // Flat - "làm phẳng" mảng từ Depth array - "Mảng sâu"
+        // var depthArray = [ 1 ,2 ,[3,4],5,6 ,[7,8,9]] ;
+
+        // var FlatArray = depthArray.reduce(function(flatOutput,depthItem){
+        //     return flatOutput.concat(depthItem);
+        // },[]);
+        // console.log(FlatArray)
+
+        // lấy ra các khóa học đưa vào 1 mảng mới 
+
+        var topics = [
+            {
+                topic:"Front-end",
+                courses : [
+                    {
+                        id:1 ,
+                        title : 'HTMl , CSS'
+                    },
+                    {
+                        id : 2 ,
+                        title :'JS'
+                    }
+                ]
+            } ,
+            {
+                topic:"Back-end",
+                courses : [
+                    {
+                        id:1 ,
+                        title : 'PHP' 
+                    },
+                    {
+                        id : 2 ,
+                        title :'NodeJS'
+                    }
+                ]
+            }
+        ];
+        var newCourses = topics.reduce(function(courses,topic) {
+            return courses.concat(topic.courses);
+        },[])
+        // console.log(newCourses);
+
+        var htmls = newCourses.map(function(course) {
+            return `<div><h2> ${course.title}</h2> <p>ID : ${course.id}</p></div>`;
+        })
+        console.log(htmls.join());
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Callback
+    </h1>
+    <script>
+        // 1. Là hàm 
+        // 2. Truyền qua đối số 
+        // 3. Được gọi lại ( trong hàm nhận đối số )
+        Array.prototype.map2 = function(callback) {
+            var output = [];
+            for ( var i = 0 ; i < this.length; ++i ) {
+                var result = callback(this[i],i)
+                console.log('result : ' , result )
+                output.push(result);
+            }
+            return output;
+        }
+        // var htmls = courses.map2(function(course) {
+        //     return `${course}`
+        // } )
+        var courses = [
+            'JavaScripts' ,
+            'PHP' ,
+            'Ruby'
+        ]
+    //    var htmls =  courses.map(function(course) {
+    //         return course
+    //     })
+        // console.log (htmls)
+    </script>
+</body>
+</html>
