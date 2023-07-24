@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading">LingTong</h1> 
+    <div class="box"></div>
+    <script>
+        // inner Text , text Content 
+
+        var headingElement = document.querySelector('.heading');
+        console.log(headingElement.innerText)
+        headingElement.innerText = ' được học MIỄN PHÍ ❤️'
+        
+        var boxElement = document.querySelector('.box');
+        
+        boxElement.innerHTML = '<h1 title="Heading">Heading</h1>'
+    </script> 
+</body>
+</html>

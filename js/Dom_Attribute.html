@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute node</title>
+</head>
+<body>
+    <div class="box">
+        <h1 class="Headinghaha"> Heading </h1>
+        <a> haha </a>
+    </div>
+    <script>
+        var headingElement = document.querySelector('h1') ;
+        var hahaElement = document.querySelector('a') ;
+        headingElement.title = 'Heading' ; // them titlte
+        // headingElement.className = 'Heading' // them class 
+        headingElement.id = 'Heading' // them id
+        hahaElement.href = ' https://www.youtube.com/watch?v=ViPTAlLPnV4&list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5&index=70'
+        headingElement.setAttribute('href' , ' tong')
+        headingElement.getAttribute('class');
+        console.log(headingElement.getAttribute('class'))
+        alert(headingElement.id)
+    </script>
+</body>
+</html>
