@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+</head>
+<body>
+    <!-- <h1 onclick="console.log(Math.random())">DOM events</h1> -->
+    <!-- <h1 onclick="console.log(this.innerText)">
+        <span onclick="console.log(this.innerText)" >DOM events</span></h1> -->
+        <h1>DOM events</h1>
+        <input type="text"> <br/>
+        <input type="checkbox"> <br/>
+        <select name="" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+    <script>
+        // var h1Element = document.querySelector('h1');
+
+        // h1Element.onclick = function() {
+        //     console.log(Math.random())
+        // }
+
+        var inputElement = document.querySelector('input[type="checkbox"]');
+        // var inputValue;
+        // inputElement.onchange = function(e) { 
+        //     console.log(e.target.value) 
+        // }
+        inputElement.onchange = function(e) {
+            console.log(e.target.checked);
+            // inputValue = e.target.value
+        }
+
+        document.onkeydown = function(e) {
+            switch(e.which) {
+                case 27 : 
+                console.log('EXIT');
+                break;
+                case 13 : 
+                console.log('SEND CHAT');
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .red1 {
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <div class="box box-2">
+        <h1>class LIST</h1>
+    </div>
+    <script>
+        // add 
+        // contains 
+        // remove 
+        // toggle 
+        var boxElement =  document.querySelector('.box') ;
+
+        console.log(boxElement.classList.value);
+        boxElement.classList.add('red1');
+        
+        setTimeout(() => {
+            boxElement.classList.remove('red1');
+        }, 3000);
+
+        setInterval(() => {
+            boxElement.classList.toggle('red1');
+        }, 1000);
+    </script>
+</body>
+</html>
